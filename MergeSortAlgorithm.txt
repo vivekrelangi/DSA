@@ -1,0 +1,40 @@
+Here is the algorithm for Merge Sort.
+
+Merge_Sort(list)
+
+1. Initialize low as 0 (i.e., start index of the list)
+
+2. Initialize high as the last index of the list
+
+3. If low==high then return list
+
+4. Else
+
+   a.Divide the list into two halves,left list and right list
+
+   b. Invoke Merge_Sort() by passing left list
+
+   c. Invoke Merge_Sort() by passing right list
+
+   d. Invoke Merge() by passing the lists returned in step 4b         and 4c respectively
+
+   e. Return the sorted list which is returned in step 4d
+
+           	
+Merge(left_list, right_list)
+
+1. Initialize i, j as 0
+
+2. Create an empty sorted_list
+
+3. While((i < number of elements in left list ) and (j < number of elements in right list) do
+
+    a. If(left_list[i]<=right_list[j]) then append left_list[i] to      the sorted_list and increment i
+
+    b. Else append right_list[j] to sorted_list and increment j
+
+4. If there are any elements left in left_list, append it to      sorted_list
+
+5. If there are any elements left in right_list, append it to sorted_list
+
+6. Return the sorted_list

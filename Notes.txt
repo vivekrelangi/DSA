@@ -1,0 +1,3 @@
+We may choose between array or linked list for implementing list based on the problem statement. 
+If the problem has frequent insertions and deletions, prefer linked list. 
+Otherwise, if it involves only accessing the elements at random or in sequence with less number of insertions and deletions, use array.

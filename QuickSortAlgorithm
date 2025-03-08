@@ -1,0 +1,36 @@
+Quick_Sort(list, low, high):
+    If low>=high then return
+    p=Partition(list, low, high)
+    Invoke Quick_Sort() by passing list, low and p-1
+    Invoke Quick_Sort() by passing list, p+1, high
+
+Partition(list, low, high):
+    Choose the element at position low as the pivot
+    Initialize i as low+1 and j as high
+    Initialize done as False
+    While not done do
+    a. While (i<=j) and list[i]<=pivot) do increment i by 1
+    b. While (j>=i) and list[j]>=pivot) do decrement j by 1
+    c. If (j < i) then change the value of done to true
+    d. Else swap the elements at position i and j
+    Swap the elements at position j and low
+    Return the partition point, j
+
+
+********************************************************************************************************************************************************************************************************************************************
+
+
+Quick Sort Algorithm from visualgo.net:
+    for each (unsorted) partition
+
+    set first element as pivot
+
+    storeIndex = pivotIndex+1
+
+    for i = pivotIndex+1 to rightmostIndex
+
+        if ((a[i] < a[pivot]) or (equal but 50% lucky))
+
+        swap(i, storeIndex); ++storeIndex
+
+    swap(pivot, storeIndex-1)
